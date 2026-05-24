@@ -170,4 +170,22 @@ export default function(pi: ExtensionAPI) {
       },
     ],
   });
+
+  // Command to switch between Moonshot API endpoints
+  pi.registerCommand("moonshot-base", {
+    description: "Switch Moonshot API base URL between international and China endpoints",
+    handler: async (_args, ctx) => {
+      const choice = await ctx.ui.select("Choose Moonshot API endpoint:", [
+        "https://api.moonshot.ai/v1 (International)",
+        "https://api.moonshot.cn/v1 (China)",
+      ]);
+      if (choice) {
+        const baseUrl = choice.startsWith("https://api.moonshot.cn")
+          ? "https://api.moonshot.cn/v1"
+          : "https://api.moonshot.ai/v1";
+        pi.registerProvider("moonshot", { baseUrl });
+        ctx.ui.notify(`Moonshot base URL switched to: ${baseUrl}`, "info");
+      }
+    },
+  });
 }
