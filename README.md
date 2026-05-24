@@ -32,6 +32,17 @@ Or add to your `~/.pi/agent/settings.json`:
 }
 ```
 
+Or add to your `~/.pi/agent/auth.json`:
+
+```json
+{
+  "moonshot": {
+    "type": "api_key",
+    "key": "your-api-key"
+  }
+}
+```
+
 ## Models
 
 | Model | Description | Context | Reasoning |
@@ -44,6 +55,21 @@ Or add to your `~/.pi/agent/settings.json`:
 | `moonshot-v1-8k` | Legacy 8K context | 8K | No |
 | `moonshot-v1-32k` | Legacy 32K context | 32K | No |
 | `moonshot-v1-128k` | Legacy 128K context | 128K | No |
+
+## Switching API Endpoint
+
+Moonshot provides different API endpoints for international and China users. Use the built-in command to switch:
+
+```bash
+pi /moonshot-base
+```
+
+This will prompt you to choose between:
+
+- `https://api.moonshot.ai/v1` (International)
+- `https://api.moonshot.cn/v1` (China)
+
+The selected endpoint will be used for all subsequent Moonshot API requests in the current session.
 
 ## Usage
 
