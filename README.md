@@ -1,17 +1,17 @@
-# pi-moonshot
+# @megasuite/pi-moonshot
 
 Pi extension adding [Moonshot AI](https://www.moonshot.ai/) provider support, including the Kimi K2.6 and K2.5 model families.
 
 ## Installation
 
 ```bash
-pi install npm:pi-moonshot
+pi install npm:@megasuite/pi-moonshot
 ```
 
 Or try without installing:
 
 ```bash
-pi -e npm:pi-moonshot
+pi -e npm:@megasuite/pi-moonshot
 ```
 
 ## Setup

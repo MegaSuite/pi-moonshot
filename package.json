@@ -1,5 +1,5 @@
 {
-  "name": "pi-moonshot",
+  "name": "@megasuite/pi-moonshot",
   "version": "1.0.0",
   "description": "Pi extension adding Moonshot AI provider with Kimi K2.6, K2.5 and other models",
   "type": "module",
@@ -10,16 +10,16 @@
     "kimi",
     "ai-provider"
   ],
-  "author": "",
+  "author": "konrad <megasuite914@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/default-anton/pi-moonshot.git"
+    "url": "git+https://github.com/MegaSuite/pi-moonshot.git"
   },
   "bugs": {
-    "url": "https://github.com/default-anton/pi-moonshot/issues"
+    "url": "https://github.com/MegaSuite/pi-moonshot/issues"
   },
-  "homepage": "https://github.com/default-anton/pi-moonshot#readme",
+  "homepage": "https://github.com/MegaSuite/pi-moonshot#readme",
   "pi": {
     "extensions": [
       "./extensions/index.ts"
